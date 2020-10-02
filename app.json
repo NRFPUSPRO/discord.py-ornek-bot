@@ -9,8 +9,8 @@
           "description": "Buraya Discord Bot Tokeninizi Girin",
           "required": true
         },
-        "RAPOR_ID": {
-            "description": "Raporların Gidiceği Kanalın IDsini Girin",
+        "LOG_ID": {
+            "description": "Tüm Bot Olaylarının Loglanıcağı Kanalın IDsini Girin",
             "required": true
         },
         "GIRIS_CIKIS_ID": {

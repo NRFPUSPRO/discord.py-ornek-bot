@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-
+import os
 
 class Report(commands.Cog):
 
@@ -9,7 +9,7 @@ class Report(commands.Cog):
 
 	@commands.command()
 	async def report(self, ctx, kisi, *, reason):
-		rapor_kanali = self.client.get_channel(Buraya Raporların Gidiceği Kanalının IDsi Gelmeli "" Olmadan)
+		rapor_kanali = os.environ.get("LOG_ID")
 		await rapor_kanali.send(f"Rapor Geldi!\nRaporlanan Kişi:\n{kisi}\nRapor Sebebi:\n{reason}")
 		await ctx.send("Rapor Gönderildi")
 

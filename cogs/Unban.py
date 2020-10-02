@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-
+import os
 
 class Unban(commands.Cog):
 
@@ -19,7 +19,8 @@ class Unban(commands.Cog):
 			if (user.name, user.desciminator) == (member_name, member_discriminator):
 				await ctx.guild.unban(user)
 				await ctx.send(f"{user.mention}'ın Banı Kaldırıldı")
-				#log = self.client.get_channel(760096837717065748)
+				log = os.environ.get("LOG_ID")
+				await log.send(f"{member} İçin Ban Kaldırıldı")
 				await ctx.send(f"{member} İçin Ban Kaldırıldı")
 				return
 

@@ -2,12 +2,12 @@ import discord
 from discord.ext import commands
 import requests
 client = commands.Bot(command_prefix="/")
-
+import os
 
 @client.event
 async def on_ready():
 	print("Ready")
-	await client.change_presence(activity=discord.Game(name="https://www.youtube.com/channel/UCyA1P62WkorOt4FsGYlu1_w"))
+	
 plugins = ["cogs.HitLoggerChecker", "cogs.Ban", "cogs.Unban", "cogs.Kick", "cogs.OtoRol", "cogs.Clear", "cogs.Report", "cogs.Yardım"]
 
 for plugin in plugins:
@@ -24,8 +24,8 @@ async def on_command_error(ctx, error):
 
 @client.event
 async def on_member_join(member):
-	giris_cikis_kanali = client.get_channel(Giriş Çıkış Kanalının Idsi Buraya)
+	giris_cikis_kanali = os.environ.get("GIRIS_CIKIS_ID")
 	await giris_cikis_kanali.send(f"{member.mention} Sunucuya Katıldı Hoş Geldin, Rolün Verildi")
 
 
-client.run("Bot Tokeniniz Buraya")
+client.run(os.environ.get("DISCORD_TOKEN"))
