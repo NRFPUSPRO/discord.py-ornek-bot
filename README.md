@@ -42,17 +42,17 @@ Yukardıdaki Butona Tıklayın
 
 5) ROL_ADI Kısmına Bir Üye Katıldığında Otomatik Olarak Verilicek Rolu Girin ROL DAHA ÖNCE OLUŞTURULMUŞ OLMALIDIR.
 
-5) Deploy Butonuna Basın Ve Manage App Butonu Çıkana Kadar Bekleyin 
+6) Deploy Butonuna Basın Ve Manage App Butonu Çıkana Kadar Bekleyin 
 
-6) Manage App Butonuna Basın
+7) Manage App Butonuna Basın
 
-7) Çıkan Ekrandan Resources Kısmına Gelin
+8) Çıkan Ekrandan Resources Kısmına Gelin
 
-8) worker python Bot.py Yazan Kısmın Sağındaki Kalem İşaretine Basın Ve Düğmeyi Açın 
+9) worker python Bot.py Yazan Kısmın Sağındaki Kalem İşaretine Basın Ve Düğmeyi Açın 
 
-9) Birkaç Saniye Bekleyin Ve İşlem Tamam
+10) Birkaç Saniye Bekleyin Ve İşlem Tamam
 
-10) Botun En İyi Şekilde Çalışması İçin Bota Administrator Yetkisi Vermenizi Öneririm
+11) Botun En İyi Şekilde Çalışması İçin Bota Administrator Yetkisi Vermenizi Öneririm
 
 
 Not : Botu Sunucuya Eklemek İçin : https://discord.com/developers/applications/ Adresine Gelin Uygulamanıza Basın Oradaki Menüden OAuth2 Butonuna Basın Scopes Kısmını bot BOT PERMISSIONS Kısmını Da Administrator Seçin Ve Çıkan URl'i Kopyalayıp Tarayıcıda Açın Ve Sunucunuza Ekleyin
