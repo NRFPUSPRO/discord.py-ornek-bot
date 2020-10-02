@@ -18,7 +18,7 @@ Kısım TOKEN Kısmıdır Oradaki Copy Butonuna Basıp Kopyalanan Tokeni Bir Yer
 Daha Sonra İse Botun Giriş Çıkış Mesajlarını Atıcağı Kanalın IDsini Almamız Gerekiyor Yapmamız Gerekenler Şunlar:
 
 1) Discord Uygulamasının Ayarlar Bölümüne Gelin ve Görünüm Sekmesinden Geliştirici Modunu Açın.
-2) Giriş Çıkış Kanalı Olarak Kullanılıcak Bir Kanal Oluşturun Ve O Kanalın Üstüne Sağ Tıklayıp ID!yi Kopyala Seçeneğini Seçin.
+2) Giriş Çıkış Kanalı Olarak Kullanılıcak Bir Kanal Oluşturun Ve O Kanalın Üstüne Sağ Tıklayıp ID'yi Kopyala Seçeneğini Seçin.
 3) Bunu Bir Yere Kaydedin. 
 
 Daha Sonra İse Botun Yaptığı Şeyleri Kayıt Altına Alıcağı Kanalın IDsini ALmamız Gerekiyor Yapıcaklarımız Neredeyse Aynı :
