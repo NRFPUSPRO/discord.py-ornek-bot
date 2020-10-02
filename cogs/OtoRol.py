@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 from discord.utils import get
-
+import os
 
 class OtoRol(commands.Cog):
 
@@ -10,7 +10,7 @@ class OtoRol(commands.Cog):
 
 	@commands.Cog.listener()
 	async def on_member_join(self, member):
-		rol = "Üye"
+		rol = os.environ.get("ROL_ADI")
 		role = get(member.guild.roles, name=rol)
 		await member.add_roles(role)
 

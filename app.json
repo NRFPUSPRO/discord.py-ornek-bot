@@ -16,6 +16,10 @@
         "GIRIS_CIKIS_ID": {
             "description": "Giriş Çıkış Mesajlarının Gidiceği Kanalın IDsini Girin",
             "required": true
+        },
+        "ROL_ADI": {
+            "description": "Bir Üye Katıldığında Verilecek Rolü Yazın",
+            "required": true
         }
     },
     "buildpacks": [{
