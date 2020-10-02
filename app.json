@@ -1,0 +1,24 @@
+{
+    "name": "Discord.py Bot",
+    "description": "Discord Bot",
+    "repository": "https://github.com/NRFPUSPRO/discord.py-ornek-bot",
+    "logo": "https://discordpy.readthedocs.io/en/rewrite/_images/snake.png",
+    "keywords": ["discord.py", "discord", "bot"],
+    "env": {
+        "DISCORD_TOKEN": {
+          "description": "Buraya Discord Bot Tokeninizi Girin",
+          "required": true
+        },
+        "RAPOR_ID": {
+            "description": "Raporların Gidiceği Kanalın IDsini Girin",
+            "required": true
+        },
+        "GIRIS_CIKIS_ID": {
+            "description": "Giriş Çıkış Mesajlarının Gidiceği Kanalın IDsini Girin",
+            "required": true
+        }
+    },
+    "buildpacks": [{
+        "url": "heroku/python"
+    }]
+}   
