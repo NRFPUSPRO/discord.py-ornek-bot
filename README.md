@@ -40,6 +40,8 @@ Yukardıdaki Butona Tıklayın
 
 4) LOG_ID Kısmına Log Kanalının ID'sini Girin
 
+5) ROL_ADI Kısmına Bir Üye Katıldığında Otomatik Olarak Verilicek Rolu Girin ROL DAHA ÖNCE OLUŞTURULMUŞ OLMALIDIR.
+
 5) Deploy Butonuna Basın Ve Manage App Butonu Çıkana Kadar Bekleyin 
 
 6) Manage App Butonuna Basın
@@ -54,3 +56,5 @@ Yukardıdaki Butona Tıklayın
 
 
 Not : Botu Sunucuya Eklemek İçin : https://discord.com/developers/applications/ Adresine Gelin Uygulamanıza Basın Oradaki Menüden OAuth2 Butonuna Basın Scopes Kısmını bot BOT PERMISSIONS Kısmını Da Administrator Seçin Ve Çıkan URl'i Kopyalayıp Tarayıcıda Açın Ve Sunucunuza Ekleyin
+
+Not 2 : Eğer Otorol Çalışmıyorsa Oto Vermesini İstediğiniz Rolü Silip Tekrar Oluşturun.
