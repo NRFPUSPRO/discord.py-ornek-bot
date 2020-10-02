@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-
+import os
 
 class Ban(commands.Cog):
 
@@ -12,8 +12,8 @@ class Ban(commands.Cog):
 	async def ban(self, ctx, member: discord.Member, *, reason=None):
 		await member.ban(reason=reason)
 		await ctx.send(f"{member.mention} Banlandı\nSebep : {reason}")
-		#log = self.client.get_channel(760096837717065748)
-		#await log.send(f"{member} Banlandı\nSebep : {reason}")
+		log = self.client.get_channel(int(os.environ.get("LOG_ID")))
+		await log.send(f"{member} Banlandı\nSebep : {reason}")
 
 
 def setup(client):

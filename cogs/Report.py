@@ -9,7 +9,7 @@ class Report(commands.Cog):
 
 	@commands.command()
 	async def report(self, ctx, kisi, *, reason):
-		rapor_kanali = os.environ.get("LOG_ID")
+		rapor_kanali = self.client.get_channel(int(os.environ.get("LOG_ID")))
 		await rapor_kanali.send(f"Rapor Geldi!\nRaporlanan Kişi:\n{kisi}\nRapor Sebebi:\n{reason}")
 		await ctx.send("Rapor Gönderildi")
 

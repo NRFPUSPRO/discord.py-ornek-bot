@@ -19,7 +19,7 @@ class Unban(commands.Cog):
 			if (user.name, user.desciminator) == (member_name, member_discriminator):
 				await ctx.guild.unban(user)
 				await ctx.send(f"{user.mention}'ın Banı Kaldırıldı")
-				log = os.environ.get("LOG_ID")
+				log = self.client.get_channel(int(os.environ.get("LOG_ID")))
 				await log.send(f"{member} İçin Ban Kaldırıldı")
 				await ctx.send(f"{member} İçin Ban Kaldırıldı")
 				return

@@ -12,7 +12,7 @@ class Clear(commands.Cog):
 	async def clear(self, ctx, amount=5):
 		await ctx.channel.purge(limit=amount+1)
 		await ctx.send(f"{amount+1} Mesaj Silindi")
-		log = os.environ.get("LOG_ID")
+		log = self.client.get_channel(int(os.environ.get("LOG_ID")))
 		await log.send(f"{amount+1} Mesaj Silindi")
 
 def setup(client):

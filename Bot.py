@@ -24,7 +24,7 @@ async def on_command_error(ctx, error):
 
 @client.event
 async def on_member_join(member):
-	giris_cikis_kanali = os.environ.get("GIRIS_CIKIS_ID")
+	giris_cikis_kanali = client.get_channel(int(os.environ.get("LOG_ID")))
 	await giris_cikis_kanali.send(f"{member.mention} Sunucuya Katıldı Hoş Geldin, Rolün Verildi")
 
 

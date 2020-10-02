@@ -12,7 +12,7 @@ class Kick(commands.Cog):
 	async def kick(self, ctx, member: discord.Member, *, reason=None):
 		await member.kick(reason=reason)
 		await ctx.send(f"{member.mention} Kicklendi\nSebep : {reason}")
-		log = os.environ.get("LOG_ID")
+		log = self.client.get_channel(int(os.environ.get("LOG_ID")))
 		await log.send(f"{member} Kicklendi\nSebep : {reason}")
 
 def setup(client):
