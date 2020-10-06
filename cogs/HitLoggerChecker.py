@@ -28,9 +28,7 @@ class HitLoggerChecker(commands.Cog):
 				kaydedilen_config.close()
 			else:
 				pass
-	@on_message.error
-	async def on_message_error(self, error):
-		pass
+	
 		
 
 def setup(client):
