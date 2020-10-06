@@ -9,7 +9,7 @@ class Ascii(commands.Cog):
         
     @commands.command()
     async def ascii(self, ctx, metin):
-        await ctx.send(pyfiglet.figlet_format(metin))
+        await ctx.send(pyfiglet.figlet_format(metin, font="big"))
 
 
 
