@@ -8,8 +8,8 @@ class Ascii(commands.Cog):
         self.client = client
         
     @commands.command()
-    async def ascii(self, ctx, metin, font=DEFAULT_FONT):
-        await ctx.send(pyfiglet.figlet_format(metin, font=font))
+    async def ascii(self, ctx, metin):
+        await ctx.send(pyfiglet.figlet_format(metin))
 
 
 
