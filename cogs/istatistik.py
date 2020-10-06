@@ -8,7 +8,11 @@ class İstatistik(commands.Cog):
         
     @commands.command(aliases=["sistatistik"])
     async def sunucuistatistik(self, ctx, guild: discord.Guild):
+
             await ctx.send(ctx.guild.name)
+
+            await ctx.send(guild.name)
+
         
         
         
