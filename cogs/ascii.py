@@ -16,7 +16,7 @@ class Ascii(commands.Cog):
         },
         headers={'api-key': 'quickstart-QUdJIGlzIGNvbWluZy4uLi4K'}
     )
-        print(r.json())    
+        await ctx.send(r.json()["output_url"])    
         
         
         
