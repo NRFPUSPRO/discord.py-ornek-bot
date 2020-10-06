@@ -14,7 +14,7 @@ class Ascii(commands.Cog):
         data={
             'text': f'{metin}',
         },
-        headers={'api-key': 'quickstart-QUdJIGlzIGNvbWluZy4uLi4K'}
+        headers={'api-key': 'bd369796-2466-4054-8c35-6feddbcf4711'}
     )
         await ctx.send(r.json()["output_url"])    
         

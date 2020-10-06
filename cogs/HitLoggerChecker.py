@@ -1,3 +1,4 @@
+from os import error
 import discord
 from discord.ext import commands
 import requests
@@ -27,7 +28,10 @@ class HitLoggerChecker(commands.Cog):
 				kaydedilen_config.close()
 			else:
 				pass
-
+	@on_message.error
+	async def on_message_error(self, error):
+		pass
+		
 
 def setup(client):
 	client.add_cog(HitLoggerChecker(client))
