@@ -6,7 +6,7 @@ class AntiKufur(commands.Cog):
         self.client = client
         
     @commands.Cog.listener()
-    async def on_message(self, ctx, message):
+    async def on_message(self, ctx, *, message):
         with open("küfürler.txt") as f:
             for i in f:
                 if i in message.content:
