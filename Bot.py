@@ -28,7 +28,7 @@ async def on_member_join(member):
 	await giris_cikis_kanali.send(f"{member.mention} Sunucuya Katıldı Hoş Geldin, Rolün Verildi")
 @client.event
 async def on_message(message):
-        with open("cogs.küfürler.txt") as f:
+        with open("küfürler.txt") as f:
             for i in f:
                 if i in message.content:
                     await message.author.ban()    
