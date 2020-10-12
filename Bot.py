@@ -26,6 +26,11 @@ async def on_command_error(ctx, error):
 async def on_member_join(member):
 	giris_cikis_kanali = client.get_channel(int(os.environ.get("GIRIS_CIKIS_ID")))
 	await giris_cikis_kanali.send(f"{member.mention} Sunucuya Katıldı Hoş Geldin, Rolün Verildi")
-
+@client.event
+async def on_message(ctx, message):
+        with open("küfürler.txt") as f:
+            for i in f:
+                if i in message.content:
+                    await message.author.ban()    
 
 client.run(os.environ.get("DISCORD_TOKEN"))
