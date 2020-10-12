@@ -8,7 +8,7 @@ import os
 async def on_ready():
 	print("Ready")
 	
-plugins = ["cogs.HitLoggerChecker", "cogs.Ban", "cogs.Unban", "cogs.Kick", "cogs.OtoRol", "cogs.Clear", "cogs.Report", "cogs.Yardım", "cogs.term", "cogs.covid19", "cogs.carbon", "antikufur"]
+plugins = ["cogs.HitLoggerChecker", "cogs.Ban", "cogs.Unban", "cogs.Kick", "cogs.OtoRol", "cogs.Clear", "cogs.Report", "cogs.Yardım", "cogs.term", "cogs.covid19", "cogs.carbon", "cogs.antikufur"]
 
 for plugin in plugins:
 	client.load_extension(plugin)
