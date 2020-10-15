@@ -26,6 +26,7 @@ class Unban(commands.Cog):
 		membername, memberdiscriminator = member.split("#")
 		banlar = await ctx.guild.bans()
 		for b in banlar:
+			print(b)
 			if (b.user.name, b.user.discriminator) in (member, memberdiscriminator):
 				await ctx.guild.unban(b.user)
 				await ctx.send(f"{b.user}'ın Banı Kaldırıldı")
