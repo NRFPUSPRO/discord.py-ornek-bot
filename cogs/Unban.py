@@ -19,21 +19,35 @@ class Unban(commands.Cog):
 	@commands.command()  #Basit Yöntem
 	@commands.guild_only()
 	@commands.has_permissions(ban_members=True)	
-	async def unban(self, ctx, member: str = "", reason="Belirtilmedi"):
-		if member == "":
-			await ctx.send("Lütfen Bir Kullanıcı Adı Girin")
-			return
-		membername, memberdiscriminator = member.split("#")
-		banlar = await ctx.guild.bans()
-		for b in banlar:
-			print(b)
-			if (b.user.name, b.user.discriminator) in (member, memberdiscriminator):
-				await ctx.guild.unban(b.user, reason=reason)
-				await ctx.send(f"{b.user}'ın Banı Kaldırıldı")
-				return
-			else:
-				await ctx.send("Bu Kullanıcı Banlı Değil")
-				return
+	async def unban(self, ctx, member: discord.User):
+		#if member == "":
+		#	await ctx.send("Lütfen Bir Kullanıcı Adı Girin")
+		#	return
+		#membername, memberdiscriminator = member.split("#")
+		#banlar = await ctx.guild.bans()
+		#for b in banlar:
+		#	print(b)
+		#	if (b.user.name, b.user.discriminator) in (member, memberdiscriminator):
+		#		await ctx.guild.unban(b.user, reason=reason)
+		#		await ctx.send(f"{b.user}'ın Banı Kaldırıldı")
+		#		return
+		#	else:
+		#		await ctx.send("Bu Kullanıcı Banlı Değil")
+		#
+  		# 		return
 
+		user = discord.Object(id=member.id)
+		await ctx.guild.unban(user)
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 def setup(client):
 	client.add_cog(Unban(client))
