@@ -37,6 +37,7 @@ class Unban(commands.Cog):
   		# 		return
 
 		user = discord.Object(id=member.id)
+		await ctx.send(member.id)
 		await ctx.guild.unban(user)
   
   
