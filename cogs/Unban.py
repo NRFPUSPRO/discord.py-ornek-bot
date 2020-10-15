@@ -9,14 +9,14 @@ class Unban(commands.Cog):
 
 	@commands.command()
 	@commands.has_permissions(ban_members=True)
-	async def unban(self, ctx, *, member):
+	async def unban(self, ctx, *, member: discord.Member):
 		banned_users = await ctx.guild.bans()
 		member_name, member_discriminator = member.split("#")
 
 		for ban_entry in banned_users:
 			user = ban_entry.user
 
-			if (user.name, user.desciminator) in (member_name, member_discriminator):
+			if (user.name, user.desciminator) == (member_name, member_discriminator):
 				await ctx.guild.unban(user)
 				await ctx.send(f"{user.mention}'ın Banı Kaldırıldı")
 				log = self.client.get_channel(int(os.environ.get("LOG_ID")))
