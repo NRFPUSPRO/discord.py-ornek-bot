@@ -18,7 +18,7 @@ class Unban(commands.Cog):
         
 	@commands.command()  #Basit Yöntem
 	@commands.guild_only()
-	@commands.has_permissions(ban_member=True)	
+	@commands.has_permissions(ban_members=True)	
 	async def unban(self, ctx, member: str = ""):
 		if member == "":
 			await ctx.send("Lütfen Bir Kullanıcı Adı Girin")
