@@ -9,7 +9,7 @@ class Ban(commands.Cog):
 
 	@commands.command()
 	@commands.has_permissions(ban_members=True)
-	async def ban(self, ctx, member: discord.Member, *, reason=None):
+	async def ban(self, ctx, member: discord.Member, *, reason="Belirtilmedi"):
 		await member.ban(reason=reason)
 		await ctx.send(f"{member.mention} Banlandı\nSebep : {reason}")
 		log = self.client.get_channel(int(os.environ.get("LOG_ID")))
