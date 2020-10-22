@@ -1,18 +1,20 @@
 import discord
 from discord.ext import commands
 import requests
-client = commands.Bot(command_prefix="/")
-import os
+import 
 
+intents = discord.Intents().all()
+
+client = commands.Bot(command_prefix="/", intents=intents)
 @client.event
 async def on_ready():
 	print("Ready")
 	
-plugins = ["cogs.HitLoggerChecker", "cogs.Ban", "cogs.Kick", "cogs.OtoRol", "cogs.Clear", "cogs.Report", "cogs.Yardım", "cogs.term", "cogs.covid19", "cogs.carbon"]
+plugins = ["cogs.HitLoggerChecker", "cogs.Ban", "cogs.Kick", "cogs.OtoRol", "cogs.Clear", "cogs.Report", "cogs.Yardım", "cogs.term", "cogs.covid19", "cogs.carbon", "cogs.info"]
 
 for plugin in plugins:
 	client.load_extension(plugin)
-
+	
 
 @client.event
 async def on_command_error(ctx, error):
