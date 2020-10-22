@@ -9,9 +9,9 @@ class Info(commands.Cog):
     @commands.command(aliases=["sinfo"])
     @commands.guild_only()
     async def server_info(self, ctx):
-        for boost_basanlar in ctx.guild.premium_subscribers:
-        	pass
-        await ctx.send(f"Server'ın Adı : {ctx.guild.name}\nServer Sahibi : {ctx.guild.owner}\nServer'ın Açıklaması : {ctx.guild.description}\nBoost Sayısı : {ctx.guild.premium_subscription_count}\nBoost Basanlar = {boost_basanlar}\n")
+        
+        await ctx.send(f"Sunucu Adı : {ctx.guild.name}\nSunucu Açıklaması : {ctx.guild.description}\nSunucu Sahibi : {ctx.guild.owner}\nBoost Sayısı : {ctx.guild.premium_subscription_count}\nBoost Basan Kişiler : {ctx.guild.premium_subscribers}\nÜye Sayısı : {ctx.guild.member_count}")
+
 
 
 def setup(client):
