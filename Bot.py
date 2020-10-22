@@ -10,7 +10,7 @@ client = commands.Bot(command_prefix="/", intents=intents)
 async def on_ready():
 	print("Ready")
 	
-plugins = ["cogs.HitLoggerChecker", "cogs.Ban", "cogs.Kick", "cogs.OtoRol", "cogs.Clear", "cogs.Report", "cogs.Yardım", "cogs.term", "cogs.covid19", "cogs.carbon", "cogs.info"]
+plugins = ["cogs.HitLoggerChecker", "cogs.Ban", "cogs.Kick", "cogs.OtoRol", "cogs.Clear", "cogs.Report", "cogs.Yardım", "cogs.term", "cogs.covid19", "cogs.carbon", "cogs.info", "cogs.rolislemleri"]
 
 for plugin in plugins:
 	client.load_extension(plugin)
